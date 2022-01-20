@@ -1,0 +1,132 @@
+@import '../../styles/shared';
+@import '~bootstrap-scss/variables';
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1500px,
+);
+
+.container {
+  background-color: rgba(19, 34, 58, 0.5);
+  display: flex;
+  flex-direction: column-reverse;
+  width: 100%;
+  max-width: 285px;
+
+  @include media-breakpoint-down(xl) {
+    max-width: 400px;
+  }
+
+  @include media-breakpoint-down(lg) {
+    max-width: inherit;
+  }
+}
+
+.single_advance {
+  display: flex;
+  align-items: center;
+  padding: 0px 15px;
+  margin: 5px 0px;
+  justify-content: space-between;
+  width: 100%;
+
+  &:first-child {
+    margin-bottom: auto;
+  }
+
+  &:last-child {
+    margin-top: 7rem;
+
+    @include media-breakpoint-down(xl) {
+      margin-top: 2rem;
+    }
+  }
+
+  &__current {
+    background-color: rgba(255, 255, 255, 0.15);
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin: 3px 0px;
+
+    &:last-child {
+      margin-top: calc(2rem - 2px);
+
+      @include media-breakpoint-up(md) {
+        margin-top: calc(7rem - 2px);
+      }
+    }
+  }
+
+  & > div:not(:first-child) {
+    display: block;
+  }
+
+  &__status {
+    min-width: 60px;
+    min-height: 35px;
+    border: 1px solid #a0a0a0;
+    border-radius: 15px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__current {
+      border-color: #ffd800;
+    }
+
+    &__lost {
+      border-color: #fd7979;
+    }
+
+    &__won {
+      border-color: #73fc7f;
+    }
+
+    &__spot {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      background-color: #2d4560;
+      margin: 2px;
+      border-radius: 50%;
+      opacity: 0.4;
+
+      &__hidden {
+        opacity: 0;
+      }
+
+      &__selected {
+        opacity: 1;
+      }
+
+      &__unlucky {
+        background-color: #fd7979;
+      }
+
+      &__lucky {
+        background-color: #73fc7f;
+      }
+    }
+  }
+
+  &__multiplier {
+    font-size: 13px;
+    font-weight: normal;
+  }
+
+  &__profit {
+    margin-left: auto;
+    width: 100px;
+    font-size: 13px;
+    font-weight: 900;
+
+    @include media-breakpoint-down(xl) {
+      width: 120px;
+    }
+  }
+}

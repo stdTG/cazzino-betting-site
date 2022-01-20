@@ -1,0 +1,100 @@
+@import '../../../../../../styles/shared';
+
+$border: 4px;
+
+.container,
+.container_open {
+  height: $bar-height;
+  position: relative;
+}
+
+.wrapper,
+.wrapper_open {
+  margin-top: -$border;
+  height: calc(#{$bar-height} + (#{$border} * 2));
+  width: 190px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.border,
+.border_open {
+  height: calc(#{$bar-height} + (#{$border} * 2));
+  width: 100%;
+  border: $border solid $yellow;
+  border-right: 0;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  margin-top: -$border;
+  background-color: $light-blue;
+}
+
+.value,
+.value_open {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: $border;
+  font-size: 23px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.icon,
+.icon_open {
+  width: 18px;
+  margin: 0 0.9rem 0 1rem;
+  fill: $bitcoinYellow;
+
+  &__inner {
+    fill: $light-blue;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .container {
+    height: $bar-height-lg;
+  }
+  .wrapper {
+    height: calc(#{$bar-height-lg} + (#{$border} * 2));
+    width: 310px;
+  }
+  .border {
+    height: calc(#{$bar-height-lg} + (#{$border} * 2));
+    border-top-left-radius: 60px;
+    border-bottom-left-radius: 60px;
+  }
+  .value {
+    font-size: 38px;
+  }
+  .icon {
+    width: 31px;
+    margin: 0 1rem 0 1.5rem;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .container_open {
+    height: $bar-height-lg;
+  }
+  .wrapper_open {
+    height: calc(#{$bar-height-lg} + (#{$border} * 2));
+    width: 310px;
+  }
+  .border_open {
+    height: calc(#{$bar-height-lg} + (#{$border} * 2));
+    border-top-left-radius: 60px;
+    border-bottom-left-radius: 60px;
+  }
+  .value_open {
+    font-size: 38px;
+  }
+  .icon_open {
+    width: 31px;
+    margin: 0 1rem 0 1.5rem;
+  }
+}

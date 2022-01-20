@@ -1,0 +1,27 @@
+@import '../../styles/shared';
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.username {
+  font-size: 19px;
+
+  &__hidden {
+    color: $live-updates-light-blue;
+  }
+}
+
+.link {
+  color: $button-primary;
+  cursor: pointer;
+
+  &:hover {
+    color: $white;
+  }
+}
+
+.avatar {
+  margin-right: 0.5rem;
+}

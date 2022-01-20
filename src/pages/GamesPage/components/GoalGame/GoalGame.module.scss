@@ -1,0 +1,205 @@
+@import '../../../../styles/shared';
+@import '../../../../styles/game-general.scss';
+@import '~bootstrap-scss/variables';
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1500px,
+);
+
+.container {
+  padding-top: 5rem;
+  margin-top: -0.5rem;
+  overflow: hidden;
+}
+
+.advances {
+  &__container {
+    position: absolute;
+    left: 0;
+    top: -5.5rem;
+    bottom: -3rem;
+    display: flex;
+
+    @include media-breakpoint-down(xl) {
+      position: relative;
+      left: inherit;
+      top: inherit;
+      bottom: inherit;
+    }
+  }
+}
+
+.board {
+  &__container {
+    flex-direction: column;
+    position: relative;
+  }
+
+  &__probability_text {
+    padding-left: 27%;
+
+    @include media-breakpoint-down(lg) {
+      padding-left: 15%;
+    }
+
+    & > span {
+      font: normal normal 300 15px/20px Roboto;
+      letter-spacing: 0px;
+      color: #82a1cc;
+      opacity: 1;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.probability {
+  &__container {
+    margin: 1.5rem auto;
+
+    &__mobile {
+      display: none;
+    }
+
+    @include media-breakpoint-down(lg) {
+      display: none;
+
+      &__mobile {
+        display: block;
+      }
+    }
+
+    &__visibility {
+      &__hidden {
+        visibility: hidden;
+      }
+    }
+  }
+
+  &__label {
+    text-align: center;
+    color: #80a2cc;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  &__button_group {
+    margin: auto;
+  }
+}
+
+.profit {
+  display: flex;
+
+  &__row {
+    position: absolute;
+    width: 100%;
+    margin: -4.5rem 0 2rem;
+  }
+
+  &__item {
+    display: inline-flex;
+    flex-direction: column;
+
+    @include media-breakpoint-up(xl) {
+      &__left {
+        margin-left: auto;
+      }
+
+      &__right {
+        margin-right: auto;
+      }
+    }
+  }
+}
+
+.amount {
+  &__disabled {
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-color: #13223a;
+      opacity: 0.5;
+    }
+  }
+}
+
+.controls {
+  &__wrapper {
+    @include media-breakpoint-up(xl) {
+      margin-top: 3rem;
+    }
+
+    &__container {
+      position: relative;
+    }
+  }
+}
+
+.game_result {
+  &__row {
+    position: relative;
+    justify-content: center;
+  }
+
+  &__message_box {
+    text-align: center;
+    background-color: #113452;
+    border: 1px solid #505e6b;
+    border-radius: 8px;
+    min-width: 275px;
+    position: absolute;
+
+    &__lost {
+      top: -4.85rem;
+
+      &__title {
+        font-size: 1.25rem;
+        font-weight: bold;
+        color: #ec7778;
+        text-transform: uppercase;
+        min-height: 54px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    &__won {
+      top: -4.85rem;
+
+      &__title {
+        font-size: 1.25rem;
+        font-weight: bold;
+        color: #7df380;
+        text-transform: uppercase;
+      }
+
+      &__multiplier {
+        color: #c0c9d1;
+        font-weight: lighter;
+      }
+    }
+  }
+}
+
+.icon {
+  width: 12px;
+  height: 12px;
+  margin-right: 5px;
+  vertical-align: baseline;
+
+  &__bitcoin {
+    fill: $bitcoinYellow;
+  }
+}

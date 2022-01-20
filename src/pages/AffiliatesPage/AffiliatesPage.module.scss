@@ -1,0 +1,316 @@
+@import '../../styles/shared.scss';
+
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        xxl: 1500px,
+);
+
+.affiliates_page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+
+  @include media-breakpoint-up(xxl) {
+    min-height: 110rem;
+    justify-content: flex-start;
+    background-repeat: no-repeat;
+    background-position-x: 2rem;
+    background-position-y: 12.125rem;
+    background-size: 8.5rem;
+  }
+
+  .txt_color {
+    color: #80a2cc;
+  }
+
+  .container,
+  .container_close {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 82%;
+  }
+  @include media-breakpoint-down(xl) {
+    .container {
+      max-width: 90%;
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    .container {
+      max-width: 82%;
+    }
+    .container_close {
+      max-width: 90%;
+    }
+  }
+  @include media-breakpoint-down(md) {
+    .container {
+      max-width: 95%;
+    }
+  }
+
+  .grid2,
+  .grid2_close {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 1fr;
+    grid-column-gap: 1.2rem;
+    transition: all 0.3s ease-out;
+  }
+  .card_bg,
+  .card_bg_close {
+    background-color: $blue;
+    padding: 1rem 1rem 1.25rem 1.8rem;
+    border-radius: 0.625rem;
+    margin-bottom: 2.4rem;
+    font-family: 'Roboto';
+
+    .sub_title,
+    .marketing_title {
+      padding-bottom: 2.5rem;
+      font-weight: Bold;
+      font-size: 1.25rem;
+      color: #80a2cc;
+      text-transform: uppercase;
+    }
+    .marketing_title {
+      padding-bottom: 1rem;
+    }
+
+    .contents {
+      padding: 0 2rem;
+      @include media-breakpoint-down(xl) {
+        padding: 0;
+      }
+    }
+
+    .flex_between {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 1.25rem;
+      text-transform: uppercase;
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    .grid2 {
+      grid-template-columns: 1fr;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    .grid2_close {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .flex_commission {
+    display: flex;
+    transition: all 0.3s ease-out;
+
+    @include media-breakpoint-down(md) {
+      grid-template-columns: 1fr;
+    }
+
+    .btn_width {
+      width: calc(100% - 130px);
+
+      @include media-breakpoint-down(xl) {
+        width: calc(100%);
+        margin-right: 10px;
+      }
+      @include media-breakpoint-down(lg) {
+        width: calc(100% - 130px);
+        margin-right: 0;
+      }
+      @include media-breakpoint-down(xs) {
+        width: calc(100%);
+        margin-right: 10px;
+      }
+    }
+
+    .btn_width_close {
+      width: calc(100% - 130px);
+
+      @include media-breakpoint-down(lg) {
+        width: calc(100%);
+        margin-right: 10px;
+      }
+      @include media-breakpoint-down(xs) {
+        width: calc(100%);
+        margin-right: 10px;
+      }
+    }
+
+    .bg_width,
+    .bg_width_close {
+      margin-left: 20px;
+      width: 130px;
+      background-image: url("../../assets/images/affiliate/commissions.svg");
+      background-size: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    @include media-breakpoint-down(xl) {
+      .bg_width {
+        display: none;
+      }
+    }
+    @include media-breakpoint-down(lg) {
+      .bg_width {
+        display: block;
+      }
+      .bg_width_close {
+        display: none;
+      }
+    }
+    @include media-breakpoint-down(xs) {
+      .bg_width {
+        display: none;
+      }
+    }
+
+    .btn_amount {
+      margin: 0 auto;
+      border-radius: 8px;
+      width: 100%;
+      max-width: 100%;
+      background-color: #152640;
+
+      .flex_amount {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 20px;
+      }
+    }
+    .btn_transfer,
+    .btn_transfer_disable {
+      margin: 40px auto 0;
+      border-radius: 8px;
+      width: 100%;
+      max-width: 100%;
+      background-color: #f49f66;
+      color: #613719;
+      text-align: center;
+
+      .flex_btn {
+        display: flex;
+        justify-content: center;
+        padding: 7px 10px;
+        font-weight: 500;
+        font-size: 1.2rem;
+      }
+    }
+    .btn_transfer:hover {
+      cursor: pointer;
+      opacity: 0.7;
+    }
+    .btn_transfer_disable {
+      opacity: 0.4;
+    }
+  }
+}
+
+.flex_marketing {
+  padding-right: 5rem;
+  transition: all 0.3s ease-out;
+  @include media-breakpoint-down(xl) {
+    padding-right: 0.9rem;
+  }
+  .grid21,
+  .grid21_close {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-auto-rows: 1fr;
+    grid-column-gap: 6%;
+    transition: all 0.3s ease-out;
+
+    .bundles {
+      padding: 0 10px 5px;
+      color: #80a2cc;
+    }
+
+    .clipboard:hover {
+      opacity: 0.7;
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    .grid21 {
+      grid-template-columns: 1fr;
+      grid-column-gap: 0;
+      grid-row-gap: 20px;
+      grid-auto-rows: auto;
+      word-break: break-all;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    .grid21_close {
+      grid-template-columns: 1fr;
+      grid-column-gap: 0;
+      grid-row-gap: 20px;
+      grid-auto-rows: auto;
+      word-break: break-all;
+    }
+  }
+  .btn_download {
+    margin: 0 auto;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 100%;
+    background-color: #152640;
+  }
+
+  .link_col {
+    font-size: 1rem;
+    color: #c4c9cf;
+  }
+  .btn_download {
+    display: flex;
+    justify-content: space-between;
+    background-color: #0a1a33;
+    @include media-breakpoint-down(lg) {
+      min-height: 50px;
+    }
+    .download_url {
+      margin: auto 5px auto 25px;
+    }
+
+    .clipboard_btn {
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
+      width: 34px;
+      background-color: #f2a166;
+
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 12px;
+      background-image: url("../../assets/images/affiliate/download.svg");
+      cursor: pointer;
+    }
+    .clipboard_btn:hover {
+      opacity: 0.7;
+    }
+  }
+}
+.upper_txt {
+  text-transform: uppercase;
+}
+.bonuses_title {
+  font-family: 'Roboto';
+  font-weight: bold;
+  font-size: 1.5625rem;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  color: #80a2cc;
+  padding: 0.625rem 1rem 1.875rem;
+  width: 100%;
+
+  @include media-breakpoint-up(xl) {
+    padding: 2.125rem 3.125rem;
+    margin-bottom: 2.125rem;
+  }
+}

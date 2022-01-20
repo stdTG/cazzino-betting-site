@@ -1,0 +1,57 @@
+@import '../../styles/shared';
+@import 'swiper/swiper.scss';
+@import 'swiper/components/pagination/pagination.scss';
+
+.swiper-wrapper {
+  padding-bottom: 42px;
+
+  @include media-breakpoint-up(lg) {
+    padding-bottom: 55px;
+  }
+}
+
+.swiper-pagination {
+  text-align: center;
+
+  &-bullet {
+    height: 16px;
+    width: 16px;
+    background-color: #32506a;
+    border: 1px solid #132739;
+    border-radius: 16px;
+    margin-left: 16px;
+    outline: none;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+    padding: 0;
+    display: inline-block;
+
+    @include media-breakpoint-up(lg) {
+      height: 21px;
+      width: 21px;
+      border-radius: 21px;
+      margin-left: 21px;
+    }
+
+    &-active {
+      cursor: default;
+      background-color: #132739;
+      border: 1px solid #32506a;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.swiper-container-horizontal {
+  > .swiper-pagination-bullets {
+    span:first-of-type {
+      margin-left: 0;
+    }
+    .swiper-pagination-bullet {
+      margin: 0 0 0 16px;
+    }
+  }
+}

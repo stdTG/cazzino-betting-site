@@ -1,0 +1,86 @@
+{
+  "userInfo": {
+    "title": "User Info",
+    "totalWager": "Total Wager",
+    "totalProfit": "Total Profit",
+    "mostPlayed": "Most Played",
+    "totalBets": "Total Bets",
+    "winBets": "Win Bets",
+    "lostBets": "Lost Bets"
+  },
+  "betDetails": {
+    "title": "Bet Details",
+    "date": "Date/time",
+    "betId": "Bet Id",
+    "game": "Game",
+    "bet": "Bet",
+    "profit": "Profit",
+    "rollOver": "Roll over",
+    "rollUnder": "Roll under",
+    "winChance": "Win chance",
+    "mines": "Mines",
+    "difficulty": {
+      "label": "difficulty",
+      "GOALS2OUT3": "2 of 3 wins",
+      "GOALS1OUT2": "1 of 2 wins",
+      "GOALS1OUT3": "1 of 3 wins"
+    },
+    "clams": "Clams"
+  },
+  "withdrawalDetails": {
+    "title": "Withdrawal Details",
+    "time": "Date / time",
+    "address": "Address",
+    "amount": "Amount",
+    "status": "Status"
+  },
+  "bonusDetails": {
+    "title": "BONUS DETAILS",
+    "time": "Date / time",
+    "claimAt": "CLAIM AT",
+    "type": "TYPE",
+    "wager": "WAGER",
+    "amount": "BONUS AMOUNT"
+  },
+  "affiliatesDetails": {
+    "title": "Affiliate Details",
+    "time": "Date / time",
+    "commission": "Commission"
+  },
+  "betResults": {
+    "title": "Bet Results"
+  },
+  "serverSeed": {
+    "title": "Server Seed",
+    "serverSeedHash": "Server Seed Hash",
+    "changeServerSeed": "change server seed",
+    "activeGameError": "End active game(s) before changing server seed",
+    "lockedNotice": "In order to see current server seed, new server seed must be generated.",
+    "serverSeed": "Server Seed",
+    "nonce": "Nonce",
+    "result": "Result",
+    "thirdPartyVerfication": "Third party verfication",
+    "verificationText": "REPL.IT is third party interactive programming environment. In order for you to allow verify bet results, we have created scripts for each game, which takes as input set of seeds, nonce, generating result.",
+    "verificationLinkText": "Verify on REPL.IT",
+    "clientSeed": "client seed"
+  },
+  "cashier": {
+    "title": "Cashier",
+    "depositNullError": "Deposit address is not set.",
+    "bitcoinWalletAddress": "Bitcoin Wallet Address",
+    "requiredConfirmations": "Required Confirmation(s)",
+    "transactionsLinkText": "Deposit Transactions"
+  },
+  "profitCut": {
+    "title": "Information",
+    "warningMessage": "On next step profit may be cut to MAX_PROFIT BTC.",
+    "cutMessage": "You've been reached maximum profit limit of MAX_PROFIT BTC.\nThe game is ended."
+  },
+  "faucet": {
+    "title": "Faucet",
+    "amount": "Amount",
+    "every": "Every",
+    "description": "Available only when balance is 0",
+    "buttonText": "Claim"
+  }
+}

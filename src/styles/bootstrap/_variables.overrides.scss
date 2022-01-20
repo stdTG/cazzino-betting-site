@@ -1,0 +1,21 @@
+// https://github.com/twbs/bootstrap/blob/master/scss/_variables.scss
+
+$body-color: $white;
+$body-bg: $dark-blue;
+
+// stylelint-disable value-keyword-case
+$font-family-sans-serif: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue',
+  Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+  'Noto Color Emoji';
+// stylelint-enable value-keyword-case
+$font-family-base: $font-family-sans-serif;
+
+$custom-control-indicator-bg: $switch-input;
+$custom-control-indicator-checked-bg: #2c84fd;
+$custom-control-indicator-size: 1.5rem;
+$custom-control-indicator-border-color: $white;
+$custom-control-indicator-focus-border-color: $switch-input;
+$custom-control-indicator-border-width: 1.5px;
+
+$grid-gutter-width: 1rem;
+$container-padding-x: $grid-gutter-width;

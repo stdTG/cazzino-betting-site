@@ -1,0 +1,47 @@
+@import '../../styles/shared';
+
+.button {
+  width: 100%;
+  border-radius: 8px;
+  color: $white;
+  text-transform: uppercase;
+  font-size: 20px;
+  background-color: $button-primary;
+  border: 0;
+  padding: 0.3rem;
+
+  &--small {
+    padding: 5px;
+
+    @include media-breakpoint-up(lg) {
+      padding: 7px;
+    }
+  }
+
+  &--medium {
+    padding: 9px;
+
+    @include media-breakpoint-up(lg) {
+      padding: 14px;
+    }
+  }
+
+  &--large {
+    padding: 9px;
+
+    @include media-breakpoint-up(lg) {
+      padding: 18px;
+    }
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: lighten($button-primary, 10%);
+  }
+}
+

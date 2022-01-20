@@ -1,0 +1,14 @@
+@import '../../styles/shared';
+
+.container {
+  border-radius: 8px;
+  padding: 1rem;
+
+  &--light {
+    background-color: $read-only-input-bg;
+  }
+
+  &--dark {
+    background-color: $blue;
+  }
+}

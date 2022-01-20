@@ -1,0 +1,62 @@
+@import '../../../../styles/shared';
+
+.center {
+  display: flex;
+  align-items: center;
+}
+.mouse_cursor:hover {
+  cursor: pointer;
+}
+.right {
+  justify-content: flex-end;
+}
+
+.logo {
+  &__size {
+    width: 90px;
+
+    @include media-breakpoint-up(lg) {
+      width: 128px;
+    }
+  }
+
+  &__color {
+    fill: $ultra-light-blue;
+  }
+}
+
+.details {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  &__button {
+    @include media-breakpoint-up(md) {
+      width: 195px;
+    }
+  }
+
+  &--spacing {
+    margin-right: 1rem;
+  }
+}
+
+.sign-in {
+  &__button {
+    display: none;
+
+    @include media-breakpoint-up(md) {
+      display: unset;
+    }
+  }
+
+  &__icon {
+    width: 36px;
+    height: 36px;
+    display: block;
+
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
+  }
+}

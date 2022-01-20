@@ -1,0 +1,32 @@
+@import '../../styles/shared';
+
+.list {
+  padding: 0;
+  margin: 0;
+
+  &__item {
+    display: flex;
+    width: 100%;
+    margin-top: 1rem;
+
+    &:first-of-type {
+      margin: 0;
+    }
+
+    &__label {
+      width: 50%;
+      color: $user-info-label-blue;
+      text-transform: uppercase;
+      justify-content: flex-start;
+    }
+
+    &__value {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      width: 50%;
+      font-weight: 300;
+      word-break: break-all;
+    }
+  }
+}
